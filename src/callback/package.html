@@ -1,0 +1,30 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<title>XML-RPC Client-Server Callback Example</title>
+</head>
+<body>
+	<p>This package contains a simple XML-RPC client-server callback demo 
+		with instructions.  It uses the XML-RPC library provided by Apache.
+	</p>
+<h3>Instructions for running the simple XML-RPC client-server callback demo</h3>
+<ol>
+  <li>Check out this project from CVS.</li>
+  <li>Compile the project manually or by opening it in Eclipse.</li>
+  <li>Assume you have chosen two different workstations, ws1 and ws2,
+    preferably next to each other in a lab.  (For testing purposes, ws1
+    and ws2 can be the same.)  The server will run on ws1, and the client on ws2.</li>
+  <li>Open a DOS window on each workstation.  To find out the IP
+    (Internet Protocol) Address of a workstation, type
+    <pre>ipconfig</pre>
+    in a DOS window.  Let ip1 be the IP Addresses of ws1.</li>
+  <li>Change to top-level directory of this project on both hosts.  On ws1, run
+    <pre>java -classpath bin:lib/xmlrpc-1.2-b1.jar callback.ServerImpl</pre>
+  </li>
+  <li>
+    On ws2 (and possibly other workstations), run
+    <pre>java -classpath bin:lib/xmlrpc-1.2-b1.jar callback.ClientImpl ip1</pre>
+    Now you should see some interaction between the client(s) and the server.
+  </li>
+</ol>
+</body>
